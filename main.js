@@ -37,15 +37,19 @@ async function translate(text, from, to, options) {
 
     const res = await fetch(apiUrl, {
         method: 'POST',
+        url: apiUrl,
         headers: {
             'Content-Type': 'application/json',
             'Authorization': `Bearer ${apiKey}`
         },
-        body: JSON.stringify(requestBody)
+        body: {
+            type: "Json",
+            payload: requestBody
+        }
     });
 
     if (res.ok) {
-        const result = res.data;
+        let result = res.data;
         if (result.choices && result.choices.length > 0) {
             const translatedText = result.choices[0].message.content.trim();
             return translatedText;
@@ -53,7 +57,7 @@ async function translate(text, from, to, options) {
             throw `翻译失败：${JSON.stringify(result)}`;
         }
     } else {
-        throw `API请求失败\n状态码: ${res.status}\n响应: ${JSON.stringify(res.data)}`;
+        throw `API请求失败\nHttp Status: ${res.status}\n${JSON.stringify(res.data)}`;
     }
 }
 
