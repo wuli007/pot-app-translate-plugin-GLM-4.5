@@ -1,0 +1,38 @@
+{
+  "id": "plugin.com.pot-app.glm4.5",
+  "plugin_type": "translate",
+  "icon": "glm4.5.svg",
+  "display": "GLM-4.5",
+  "homepage": "https://github.com/wuli007/pot-app-translate-plugin-GLM-4.5",
+  "needs": [
+    { "key": "apiKey", "display": "API密钥", "type": "input" }
+  ],
+  "language": {
+    "auto": "auto",
+    "zh_cn": "zh",
+    "zh_tw": "zh_HANT",
+    "en": "en",
+    "ja": "ja",
+    "ko": "ko",
+    "fr": "fr",
+    "es": "es",
+    "ru": "ru",
+    "de": "de",
+    "it": "it",
+    "tr": "tr",
+    "pt_pt": "pt",
+    "pt_br": "pt",
+    "vi": "vi",
+    "id": "id",
+    "th": "th",
+    "ms": "ms",
+    "ar": "ar",
+    "hi": "hi",
+    "mn_cy": "mn",
+    "mn_mo": "mn",
+    "km": "km",
+    "nb_no": "no",
+    "nn_no": "no",
+    "fa": "fa"
+  }
+}
